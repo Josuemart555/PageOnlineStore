@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tienda Online</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="js/bootstrap.bundle.min.js"></script>
   <style>
     .cart-icon {
       position: relative;
@@ -35,10 +34,13 @@
 
   <header class="container mt-3">
     <div class="d-flex justify-content-end">
-      <div class="cart-icon">
-        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Carrito" width="32">
-        <div class="cart-count">3</div>
-      </div>
+      <button class="btn btn-outline-light position-relative">
+        🛒
+        <span id="contadorCarrito"
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          0
+        </span>
+      </button>
     </div>
 
     <div id="carouselExampleIndicators" class="carousel slide mt-2" data-bs-ride="carousel">
@@ -77,62 +79,8 @@
 
       
       <div class="col-sm-9">
-        <div class="row">
+        <div class="row" id="contenedorProductos">
           
-          <div class="col-12 col-md-4 product-card">
-            <div class="card h-100">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="Producto 1">
-              <div class="card-body">
-                <h5 class="card-title">Producto 1</h5>
-                <button class="btn btn-primary w-100">Agregar al carrito</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4 product-card">
-            <div class="card h-100">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="Producto 2">
-              <div class="card-body">
-                <h5 class="card-title">Producto 2</h5>
-                <button class="btn btn-primary w-100">Agregar al carrito</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4 product-card">
-            <div class="card h-100">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="Producto 3">
-              <div class="card-body">
-                <h5 class="card-title">Producto 3</h5>
-                <button class="btn btn-primary w-100">Agregar al carrito</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4 product-card">
-            <div class="card h-100">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="Producto 4">
-              <div class="card-body">
-                <h5 class="card-title">Producto 4</h5>
-                <button class="btn btn-primary w-100">Agregar al carrito</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4 product-card">
-            <div class="card h-100">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="Producto 5">
-              <div class="card-body">
-                <h5 class="card-title">Producto 5</h5>
-                <button class="btn btn-primary w-100">Agregar al carrito</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4 product-card">
-            <div class="card h-100">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="Producto 6">
-              <div class="card-body">
-                <h5 class="card-title">Producto 6</h5>
-                <button class="btn btn-primary w-100">Agregar al carrito</button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -142,5 +90,7 @@
     Diseñado por: Josue Manuel Martinez Pedroza - 1890-17-12512
   </footer>
 
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/shopOnline.js"></script>
 </body>
 </html>
